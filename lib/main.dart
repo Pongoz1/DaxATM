@@ -107,7 +107,7 @@ class DaxAtmScreen extends StatelessWidget{
                       borderRadius : BorderRadius.circular(0),
                       boxShadow: [
                         BoxShadow ( 
-                          color : Colors.black.withOpacity(0.5),
+                          color : const Color.fromARGB(0, 62, 32, 104).withOpacity(0.5),
                           spreadRadius : 5,
                           blurRadius : 10,
                           offset : Offset(0, 4),
@@ -159,7 +159,7 @@ class DaxAtmScreen extends StatelessWidget{
                                   borderRadius: BorderRadius.circular(0),
                                   boxShadow: [
                                     BoxShadow(
-                                      color: Colors.black.withOpacity(0.5),
+                                      color:  Color.fromARGB(0, 62, 32, 104).withOpacity(0.5),
                                       spreadRadius: 5,
                                       blurRadius: 10,
                                       offset: Offset(0, 4),
