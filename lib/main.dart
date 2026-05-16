@@ -31,7 +31,7 @@ class DaxAtmScreen extends StatelessWidget{
         ////////////////////////////////////////////////////////////////////BACKGROUND//////////////////////////////////////////////////////
         Positioned.fill(
           child: Image.asset(
-            'background.jpeg',
+            'barubg.jpg',
             fit: BoxFit.cover,
           ),
         ),
@@ -70,6 +70,14 @@ class DaxAtmScreen extends StatelessWidget{
                     width: 700,
                     padding: const EdgeInsets.fromLTRB(24, 28, 24, 28),
                     decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow( 
+                          color :  Colors.black.withOpacity(0.5),
+                          spreadRadius : 4,
+                          blurRadius: 10,
+                          offset: Offset(0, 4),
+                        ),
+                      ],
                       color: Colors.white.withOpacity(0.25),
                       border: Border.all( 
                         color: Colors.black.withOpacity(0.6),                    
