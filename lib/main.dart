@@ -72,13 +72,13 @@ class DaxAtmScreen extends StatelessWidget{
                     decoration: BoxDecoration(
                       boxShadow: [
                         BoxShadow( 
-                          color :  Colors.black.withOpacity(0.5),
-                          spreadRadius : 4,
+                          color :  Colors.black.withOpacity(0.35),
+                          spreadRadius : 16,
                           blurRadius: 10,
-                          offset: Offset(0, 4),
+                          offset: Offset(0, 0),
                         ),
                       ],
-                      color: Colors.white.withOpacity(0.25),
+                      color: Colors.white.withOpacity(0.5),
                       border: Border.all( 
                         color: Colors.black.withOpacity(0.6),                    
                       ),
@@ -88,7 +88,7 @@ class DaxAtmScreen extends StatelessWidget{
                       children: [ 
                         Container( 
                           width: double.infinity,
-                          padding: const EdgeInsets.symmetric(vertical: 10),
+                          padding: const EdgeInsets.symmetric(vertical: 7),
                           decoration: BoxDecoration( 
                             border: Border.all ( 
                               color : Colors.white.withOpacity(1),
@@ -99,14 +99,16 @@ class DaxAtmScreen extends StatelessWidget{
                               'CARDLESS ACCESS',
                               style: TextStyle( 
                                 color : Colors.white,
-                                fontSize : 20,
-                                fontWeight : FontWeight.w700,
+                                fontSize : 28,
+                                fontWeight : FontWeight.bold,
                                 letterSpacing : 1.5,                        
                               ),
                             ),
                           ),
                         ),
                         const SizedBox(height: 22),
+                       //////////////////////////////////////////////////////////////////////face
+                       
                         Row ( 
                           children: [
                             Expanded( 
@@ -116,8 +118,8 @@ class DaxAtmScreen extends StatelessWidget{
                       boxShadow: [
                         BoxShadow ( 
                           color : const Color.fromARGB(0, 62, 32, 104).withOpacity(0.5),
-                          spreadRadius : 5,
-                          blurRadius : 10,
+                          spreadRadius : 7,
+                          blurRadius : 9,
                           offset : Offset(0, 4),
                         ),
                       ],
@@ -159,7 +161,7 @@ class DaxAtmScreen extends StatelessWidget{
                   ),
                             ),
 
-////////////////////////////////////////////////////////// face id///////////////////////////////////////////////////////
+////////////////////////////////////////////////////////// fingreyd///////////////////////////////////////////////////////
                             const SizedBox(width: 40),
                             Expanded(  
                               child: Container(
@@ -168,8 +170,8 @@ class DaxAtmScreen extends StatelessWidget{
                                   boxShadow: [
                                     BoxShadow(
                                       color:  Color.fromARGB(0, 62, 32, 104).withOpacity(0.5),
-                                      spreadRadius: 5,
-                                      blurRadius: 10,
+                                      spreadRadius: 7,
+                                      blurRadius: 9,
                                       offset: Offset(0, 4),
                                     ),
                                   ],
