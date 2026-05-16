@@ -1,6 +1,6 @@
 # daxatm
 
-A new Flutter project.
+Atm yang dapat melakukan multi transaksi
 
 ## Getting Started
 
