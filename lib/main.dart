@@ -102,7 +102,19 @@ class DaxAtmScreen extends StatelessWidget{
                         Row ( 
                           children: [
                             Expanded( 
-                              child: SizedBox(
+                              child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius : BorderRadius.circular(0),
+                      boxShadow: [
+                        BoxShadow ( 
+                          color : Colors.black.withOpacity(0.5),
+                          spreadRadius : 5,
+                          blurRadius : 10,
+                          offset : Offset(0, 4),
+                        ),
+                      ],
+                    ),
+
                     width : 360,
                     height : 120,
                     child : ElevatedButton (  
@@ -138,43 +150,54 @@ class DaxAtmScreen extends StatelessWidget{
                     ),
                   ),
                             ),
+
+////////////////////////////////////////////////////////// face id///////////////////////////////////////////////////////
                             const SizedBox(width: 40),
                             Expanded(  
-                              child: SizedBox( 
-                    width : 360,
-                    height : 120,
-                    child : ElevatedButton (  
-                      style : ElevatedButton.styleFrom  ( 
-                        backgroundColor : Colors.white,
-                        foregroundColor : Colors.black, 
-                        shape: RoundedRectangleBorder( 
-                          borderRadius: BorderRadius.circular(0)
-                        ),
-                        elevation : 8,
-
-                      ),
-                      onPressed: () {},
-                      child: Column(  
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const[
-                          Icon(
-                            Icons.fingerprint,
-                            size: 42,
-                          ),
-                          SizedBox(height: 10),
-                          Text (  
-                            'FINGERPRINT',    
-                            style : TextStyle( 
-                              fontSize : 22,
-                              fontWeight : FontWeight.w700,
-                              letterSpacing : 1,
-                            ),
-                          ),
-
-                        ],
-                      ),
-                    ),
-                  ),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(0),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.black.withOpacity(0.5),
+                                      spreadRadius: 5,
+                                      blurRadius: 10,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
+                                width: 360,
+                                height: 120,
+                                child: ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.white,
+                                    foregroundColor: Colors.black,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(0),
+                                    ),
+                                    elevation: 0,
+                                  ),
+                                  onPressed: () {},
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: const [
+                                      Icon(
+                                        Icons.fingerprint,
+                                        size: 42,
+                                      ),
+                                      SizedBox(height: 10),
+                                      Text(
+                                        'FINGERPRINT',
+                                        style: TextStyle(
+                                          fontSize: 22,
+                                          fontWeight: FontWeight.w700,
+                                          letterSpacing: 1,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
                             ),
                           ],
                         ),                     
@@ -229,49 +252,4 @@ class DaxAtmScreen extends StatelessWidget{
     ),
   );
   }
-
-
-
-
-  Widget _buildAccessButton({
-    required IconData icons,
-    required String label,
-    required VoidCallback onTap,
-  }) {
-    return SizedBox (  
-      height: 140,
-      child : ElevatedButton(
-        style : ElevatedButton.styleFrom ( 
-          backgroundColor: Colors.white,
-          foregroundColor: const Color(0xFF7A5BA8),
-          elevation : 6,
-          shape : RoundedRectangleBorder( 
-            borderRadius: BorderRadius.circular(0),
-
-          ),
-        ),
-        onPressed : onTap,
-        child: Column (  
-          mainAxisAlignment: MainAxisAlignment.center,
-          children : [
-            Icon( 
-              icons,
-              size: 48,
-            ),
-            const SizedBox(height : 12),
-            Text(  
-              label,  
-              style: const TextStyle (  
-                fontSize : 22,
-                fontWeight : FontWeight.w700,
-                color : Color(0xFF4F5A8A),
-                letterSpacing: 1,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
 }
-
