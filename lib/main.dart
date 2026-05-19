@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'homepage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -137,7 +138,14 @@ class DaxAtmScreen extends StatelessWidget{
                         elevation : 8,
 
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push( 
+                          context,
+                          MaterialPageRoute ( 
+                            builder: (context) => const homepage(),
+                          ),
+                        );
+                      },
                       child: Column(  
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: const[
@@ -187,7 +195,14 @@ class DaxAtmScreen extends StatelessWidget{
                                     ),
                                     elevation: 0,
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push( 
+                                      context, 
+                                      MaterialPageRoute ( 
+                                        builder: (context) => const homepage(),
+                                      ),
+                                    );
+                                  },
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: const [
@@ -228,7 +243,14 @@ class DaxAtmScreen extends StatelessWidget{
                         elevation : 8,
 
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push( 
+                          context,
+                          MaterialPageRoute( 
+                            builder: (context) => const homepage(),
+                          ),
+                        );
+                      },
                       child: Column(  
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: const[
